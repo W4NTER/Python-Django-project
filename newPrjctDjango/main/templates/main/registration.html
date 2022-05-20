@@ -1,0 +1,19 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+{{ title }}
+{% endblock %}
+
+{% block content %}
+<form method="post">
+  {% csrf_token %}
+  <h1 class="h3 mb-3 font-weight-normal">Регистрация</h1>
+  <label class="sr-only">Логин</label>
+  <input class="form-control"  required="" autofocus="">
+  <label for="inputPassword" class="sr-only">Пороль</label>
+  <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
+  <div class="checkbox mb-3">
+  </div>
+  <button class="btn btn-lg btn-primary btn-block" type="submit">Регистрация</button>
+</form>
+{% endblock %}
