@@ -1,6 +1,6 @@
 from django.urls import path, include
 from . import views
-from .views import RegisrerUser
+from .views import RegisterUser
 
 urlpatterns = [
     path('', views.index, name='home'),
@@ -8,5 +8,5 @@ urlpatterns = [
     path('create', views.create, name='create'),
     path('delete/<int:id>', views.delete),
     path('<int:pk>/update', views.TasksUpdateView.as_view(), name='tasks-update'),
-    path('registeration', RegisrerUser.as_view(), name='registeration')
+    path('registration', RegisterUser.as_view(), name='registration')
 ]
